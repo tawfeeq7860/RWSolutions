@@ -1,0 +1,232 @@
+body{
+	margin:0;
+	
+}
+h1{
+	font-family: 'Asap Condensed', sans-serif;
+	color :black;
+	text-align:center;
+}
+h2{
+  font-family: 'Asap Condensed', sans-serif;
+	color :black;
+	text-align:left;
+	font-size:1rem;
+}
+h3{
+  font-family: 'Asap Condensed', sans-serif;
+	color :green;
+	text-align:left;
+	font-size:1.5rem;
+	text-decoration:underline;
+}
+.container {
+  position: absolute;
+  width:100%;
+  
+}
+.bg-img {
+  /* The image used */
+  background-image: url("rwbg.jpg");
+  min-height: 380px;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  
+  /* Needed to position the navbar */
+  position: relative;
+}
+.centered {
+	  font-family: 'Asap Condensed', sans-serif;
+	font-size:2rem;
+	 color:#318B41;
+	 font-weight:bold;
+  position:absolute;
+  top: 50%;
+  left: 50%;
+ transform: translate(-30%, -50%);/*the transform method is used to move the element 50% to the left and 50% up from its current pocition so that it stays in the top banner*/
+}
+
+.bottom-right {
+  position: absolute;
+/*  bottom: 8px; used to set the images in the section 10pixels above where it ends */
+  right: 16px;/* used to set the images in the section 16pixels away from the right of the edge of the banner*/
+  top:30%;
+  
+  
+}
+img[title=homecover]{
+	height:325px;
+	width:100%;
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+
+}
+
+li {
+	
+  float: left;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+  top: 0;
+}
+.openpage{
+	color:black;
+	font-family: 'Asap Condensed', sans-serif;
+	font-size:1.4rem;
+	text-shadow:8px 8px 8px #318B41;
+	 
+	
+}
+.flex-container{
+	flex-flow: row wrap;
+	flex-direction:row;
+  display: flex;
+}
+.flex-container2{
+flex-wrap:nowrap;
+	flex-direction:row;
+  display: flex;
+  gap:150px;
+
+}
+@media (max-width: 800px) {
+  .flex-container{
+    flex-direction: column;
+	
+  }
+}
+@media (max-width: 800px) {
+.flex-container2 {
+    flex-direction: column;
+	gap:10px;
+  }
+}
+/* Style the navbar */
+#navbar {
+  overflow: hidden;
+ font-family: 'Asap Condensed', sans-serif;
+ font-size:1.4rem;
+ background-image: linear-gradient( rgba(0,0,0,0.7), rgba(0,0,0,0));
+}
+
+
+
+/* Page content */
+.content {
+  padding: 16px;
+  color:Black;
+   font-family: 'Asap Condensed', sans-serif;
+}
+
+/* The sticky class is added to the navbar with JS when it reaches its scroll position */
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+
+}
+
+/* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position:fixed and top:0) */
+.sticky + .content {
+  padding-top: 60px;
+}
+
+
+a:active{
+  color:white;
+   text-decoration:none;
+}
+a:visited {
+  color:white;
+   text-decoration:none;
+}
+a:link {
+  color:white;
+   text-decoration:none;
+}
+a:hover {
+  color: #00e600;
+   text-decoration:none;
+}
+img[title=logo]{
+	height:75px;
+	width:75px;
+}
+.right{
+	left:100%;
+}
+
+html {
+  font-size: 100%;
+}
+
+img[title=locate]{
+	height:200px;
+	width:300px;
+	border-style:solid;
+	border-color:rgb(0, 0, 0, 0.6);
+}
+.footer {
+  display: flex;
+  flex-flow: row wrap;
+  padding: 10px;
+  color: #006600;
+    background-color: rgb(0, 0, 0, 0.5);
+  border-top: 1px solid #e5e5e5;
+  justify-content: center;
+}
+
+
+
+.footer__logo {
+ text-align:left;
+}
+
+.footer__btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 36px;
+  max-width: max-content;
+  background-color: rgb(33, 33, 33, 0.5);
+  border-radius: 100px;
+  color: green;
+  line-height: 0;
+  margin: 0.6em 0;
+  font-size: 1rem;
+  padding: 0 1.3em;
+}
+
+img[title=Instagram],img[title=facebook]{
+	height:45px;
+	width:45px;
+}
+
+.btmfooter {
+  display: flex;
+  flex-flow: row wrap;
+  padding: 10px;
+  color: #000000;
+    background-color: green;
+  justify-content: center;
+  font-family: 'Asap Condensed', sans-serif;
+	font-size:1.2rem;
+	font-weight:bold;
+}
+hr{
+	height:1px;
+	padding:0;
+	background-color:white;
+}
