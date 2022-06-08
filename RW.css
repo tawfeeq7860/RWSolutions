@@ -98,7 +98,7 @@ li {
 flex-wrap:nowrap;
 	flex-direction:row;
   display: flex;
-  gap:150px;
+  gap:125px;
 
 }
 @media (max-width: 800px) {
