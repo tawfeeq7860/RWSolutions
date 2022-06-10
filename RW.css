@@ -20,6 +20,12 @@ h3{
 	font-size:1.5rem;
 	text-decoration:underline;
 }
+h4{
+color:gray; 
+font-size:1.2rem;
+font-family: 'Montserrat', sans-serif;
+}
+
 .container {
   position: absolute;
   width:100%;
@@ -100,6 +106,15 @@ flex-wrap:nowrap;
   display: flex;
   gap:125px;
 
+}
+.flex-container3{
+flex-wrap:nowrap;
+	flex-direction:row;
+  display: flex;
+  background-color:#4d9900;
+  padding:20px;
+  gap:80px;
+  justify-content:center;
 }
 @media (max-width: 800px) {
   .flex-container{
@@ -214,6 +229,11 @@ img[title=Instagram],img[title=facebook]{
 	height:45px;
 	width:45px;
 }
+img[title=coin]{
+	height:250px;
+	width:250px;
+}
+
 
 .btmfooter {
   display: flex;
@@ -224,4 +244,12 @@ img[title=Instagram],img[title=facebook]{
   font-family: 'Asap Condensed', sans-serif;
 	font-size:1.2rem;
 	font-weight:bold;
+}
+.vl {
+ font-size:1.5rem; 
+ color: #4d9900; 
+ text-align:right;
+ border-right:2px solid gray;  
+padding:20px;
+  
 }
