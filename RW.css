@@ -117,7 +117,7 @@ flex-wrap:nowrap;
   justify-content:center;
 }
 @media (max-width: 800px) {
-  .flex-container{
+  .flex-container, .flex-container3{
     flex-direction: column;
 	
   }
