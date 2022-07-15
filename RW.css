@@ -179,6 +179,11 @@ img[title=logo]{
 	height:75px;
 	width:75px;
 }
+
+img[title=logo1]{
+	height:120px;
+	width:120px;
+}
 .right{
 	left:100%;
 }
@@ -257,3 +262,20 @@ padding:20px;
   
 }
 
+.order{
+	 display: block;
+      width: 200px;
+      padding: 10px;
+      margin: 20px auto 0;
+      border: none;
+      border-radius: 5px; 
+      background: green; 
+      font-size: 14px;
+      font-weight: 600;
+      color: white;
+	  text-align:center;
+	    font-family: 'Asap Condensed', sans-serif;
+}
+.order a:hover{
+	color:black;
+}

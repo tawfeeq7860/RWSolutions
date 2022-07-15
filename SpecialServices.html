@@ -1,107 +1,152 @@
 <!DOCTYPE html>
 <html>
-<head>
-<link rel="stylesheet" href="RW.css"/>
+  <head>
+    <title>Order form</title>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600' rel='stylesheet' type='text/css'>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+	<link rel="stylesheet" href="RW.css"/>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Asap+Condensed&display=swap" rel="stylesheet">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
-
-<style>  
-
+    <style>
+      html, body {
+      height: 100%;
+      }
+      body, input, select { 
+      padding: 0;
+      margin: 0;
+      outline: none;
+      font-family: Roboto, Arial, sans-serif;
+      font-size: 16px;
+      color: #eee;
+      }
+      h1, h3 {
+      font-weight: 400;
+      }
+      h1 {
+      font-size: 32px;
+      }
+      h3 {
+      color: #1c87c9;
+      }
+      .main-block, .info {
+      display: flex;
+      flex-direction: column;
+      }
+      .main-block {
+      justify-content: center;
+      align-items: center;
+      width: 100%; 
+      min-height: 100%;
+      background: url("recycle.png") no-repeat center;
+      background-size: cover;
+      }
+      form {
+      width: 80%; 
+      padding: 25px;
+      margin-bottom: 20px;
+      background: rgba(0, 0, 0, 0.8);
+      }
+      input, select {
+      padding: 5px;
+      margin-bottom: 20px;
+      background: transparent;
+      border: none;
+      border-bottom: 1px solid #eee;
+      }
+      input::placeholder {
+      color: #eee;
+      }
+      option {
+      background: black; 
+      border: none;
+      }
+	 
+      .metod {
+      display: flex; 
+      }
+      input[type=radio] {
+      display: none;
+      }
+      label.radio {
+      position: relative;
+      display: inline-block;
+      margin-right: 20px;
+      text-indent: 32px;
+      cursor: pointer;
+      }
+      label.radio:before {
+      content: "";
+      position: absolute;
+      top: -1px;
+      left: 0;
+      width: 17px;
+      height: 17px;
+      border-radius: 50%;
+      border: 2px solid #1c87c9;
+      }
+      label.radio:after {
+      content: "";
+      position: absolute;
+      width: 8px;
+      height: 4px;
+      top: 5px;
+      left: 5px;
+      border-bottom: 3px solid #1c87c9;
+      border-left: 3px solid #1c87c9;
+      transform: rotate(-45deg);
+      opacity: 0;
+      }
+      input[type=radio]:checked + label:after {
+      opacity: 1;
+      }
+      button {
+      display: block;
+      width: 200px;
+      padding: 10px;
+      margin: 20px auto 0;
+      border: none;
+      border-radius: 5px; 
+      background: #1c87c9; 
+      font-size: 14px;
+      font-weight: 600;
+      color: #fff;
+      }
+      button:hover {
+      background: green;
+      }
+      @media (min-width: 568px) {
+      .info {
+      flex-flow: row wrap;
+      justify-content: space-between;
+      }
+      input {
+      width: 46%;
+      }
+      input.fname {
+      width: 100%;
+      }
+      select {
+      width: 48%;
+      }
+      }
+    </style>
+  </head>
+  <body>
   
-
-.d-flex {  
-  display: flex;  
-  flex-direction: row;  
-  background: #f6f6f6;  
-  border-radius: 0 0 5px 5px;  
-  padding: 25px;  
-  justify-content:center;
-  gap:20%;
-}  
- 
-label {   
-  margin: 15px;  
-}  
- 
-
-input[type="email"]  
-{  
-  width: 35%;  
-  height: 30px;  
-  padding: 5px 10px;  
-  margin-bottom: 10px;  
-  border: 1px solid #dadada;  
-  color: #888;  
-}  
-select  
-{  
-  width: 35%;  
-  height: 30px;  
-  padding: 5px 10px;  
-  margin-bottom: 10px;  
-  border: 1px solid #dadada;  
-  color: #888;  
-}  
-input[type="text"] {
-  
-  width: 50%;  
-  height: 30px;  
-  padding: 5px 10px;  
-  margin-bottom: 10px;  
-  border: 1px solid #dadada;  
-  color: #888;  
-}  
-input[type="tel"]   
-{  
-  width: 50%;  
-  height: 30px;  
-  padding: 5px 10px;  
-  margin-bottom: 10px;  
-  border: 1px solid #dadada;  
-  color: #888;  
-}  
-select {  
-  width: 35%;  
-  height: 45px;  
-  padding: 5px 10px;  
-  margin-bottom: 10px;  
-}  
-
-button {  
-  width: 100px;  
-  margin-top: 10px;  
-  padding: 10px;  
-  border: none;  
-  border-radius: 30px;  
-  background: #52ad9c;  
-  color: #fff;  
-  font-size: 15px;  
-  font-weight: bold;  
-}  
-button:hover {  
-  cursor: pointer;  
-  background: #428a7d;  
-}  
-</style> 
-</head>
-
-<body>
-<section >
-<div class="bg-img"> 
-<div class="container">
+  <section >
+<div class="container" >
 <div id="navbar">
 
-<ul class="flex-container">
- <li> <a href="#home" >Home</a></li>
- <li> <a href="#news">BookCollection</a></li>
-  <li><a href="#contact">Contact</a></li>
+<ul class="flex-container" style="justify-content:center;">
+ <li> <a href="index.html" >Home</a></li>
+ <li> <a href="services.html">BookCollection</a></li>
+  <li><a href="contact.html">Contact</a></li>
    <li><a href="#news">Community</a></li>
     <li><a href="#news">Feedback</a></li>
-	<li class="right"> <img src="rwlogo1.png" title="logo" > </li>
 	</ul>
 	
 	</div>
@@ -109,67 +154,33 @@ button:hover {
 </div>
 
 </section>
-
-<form action="" method="">  
-    <section class="d-flex">
-<div > 
-    <label class="fname"> First Name 
-    </label>  
-	<input type="text" name="fname">  
-	<br>
-    <label class="lname"> Last Name
-    </label>  
-	 <input type="text" name="lname">  
-		<br>
-
-    <label>  
-      Company Name  
-    </label> 
- <input type="text" name="cn">  	
- 	<br>
-
-    <label> Phone Number  
-    </label>  
-	      <input type="tel" name="city">  
-		  	<br>
-
-    <label >   
-	Email Address 
-    </label>  
-	      <input type="tel" name="city">  
-	</div>
-	
-	<div>
-	    <label>    Address   </label>  
-	    <input type="text" name="houseadd" placeholder="House number and street name" required>    
-      <input type="text" name="apartment" placeholder="Apartment, suite, unit etc. (optional)">  
-    <br> 
-    <label>   Town / City       </label>   
-	<input type="text" name="city">  
-	<br>
-	<label for="birthday">Birthday:</label>
-  <input type="date" id="birthday" name="birthday">
-  </div>
-  </section>
-  </form>   
-    <button type="button"> Place Order </button> 
-
-
-
-<section>
-<form action="https://formsubmit.co/tawfeeq42@gmail.com" method="POST">
-     <input type="text" name="name" required>
-     <input type="email" name="email" placeholder="Email Address">
-	 
-	 <input type="hidden" name="_next" value="https://tawfeeq7860.github.io/RWSolutions/">
-	 <input type="hidden" name="_subject" value="New submission!"
-     <button type="submit">Send</button>
-</form>
-</section>
-
-
-
-<script>
+    <div class="main-block">
+	<img src="rwlogo1.png" title="logo1" >
+      <h1>Order Form</h1>
+      <form action="https://formsubmit.co/tawfeeq42@gmail.com" method="POST">
+        <div class="info">
+          <input class="fname" type="text" name="name" placeholder="Full name">
+		   <input type="text" name="name" placeholder="Company Name">
+          <input type="text" name="name" placeholder="Email">
+          <input type="text" name="name" placeholder="Phone number">
+          <input type="text" name="name" placeholder="Address">
+          <input type="text" name="name" placeholder="Town/City">
+         
+          <select>
+            <option value="Required Service" disabled selected>Required Service</option>
+            <option value="10">Waste Segregation Cages</option>
+            <option value="20">Fully recyclable K4 bins</option>
+            <option value="30">Waste segregation Bins</option>
+            <option value="40">Shredding of confidential documents </option>
+            
+          </select>
+              <button href="thankyou.html" class="button">Submit</button>
+        </div>
+        
+        </div>
+      </form>
+    </div>
+ <script>
 window.onscroll = function() {myFunction()};
 
 var navbar = document.getElementById("navbar");
@@ -184,45 +195,5 @@ function myFunction() {
 }
 </script>
 </body>
-<footer>
 
-
-<section class="footer">
-<section class="flex-container2">
-  <div>
-  <img src="rwlogo1.png" title="logo"class="footer__logo" >
-        
-    <h3>Address</h3>
-     <h2>  Plot 4084, Mogoditshane, Botswana <br>
-	 <br>
-          
-      <a class="footer__btn" href="mailto:mohammedrwsolutions@gmail.com">Email Us</a>
-	  </h2>
-  </div> 
- 
-  <div>
-  <h3>Quick Links </h3>
-  <h2>Services We Offer</h2>
-  <h2>Get In Touch</h2>
-  <h2>Speak To Someone</h2>
-  <h2>Community work</h2>
-  <h2>About The Company</h2>
-  </div>
- 
-  <div>
-   <h3>Where to find us </h3>
-   <a href="https://www.google.com/maps/place/Recycling+Waste+Solutions/@-24.6145791,25.8606402,15z/data=!4m2!3m1!1s0x0:0x2c3bb442464181a5?sa=X&ved=2ahUKEwjAgKKE6J74AhUiSfEDHVjwCV0Q_BJ6BAhWEAM" target="_blank"> <img src="rwlocate.jpg" title="locate" ></a>
-  </div>
-  
-  <div>
-  <h3> Our Socials</h3>
-   <a href="https://web.facebook.com/Recycling-Waste-solutions-107098118315900" target="_blank"><img src="facebook.png" title="facebook" ></a>
-   <br>
-   <br>
-   <a href="https://www.instagram.com/recyclingwastesolutions/?hl=en" target="_blank"> <img src="instagram.png" title="Instagram" ></a>
-  </div>
-</section>
-<h2 class="btmfooter">© 2022 Recycling Waste Solutions  BW. All rights reserved.</h2>
-</section>
-</footer>
 </html>
