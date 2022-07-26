@@ -132,7 +132,7 @@
       select {
       width: 48%;
       }
-      }
+      
     </style>
   </head>
   <body>
@@ -164,17 +164,21 @@
           <input type="text" name="name" placeholder="Phone number"required>
           <input type="text" name="name" placeholder="Address"required>
           <input type="text" name="name" placeholder="Town/City"required>
-         
+		   <input type="date" name="name" placeholder="DD/MM/YYYY (date)"required>
+			
           <select required>
             <option value="Required Service" disabled selected>Required Service</option>
             <option value="10">Waste Segregation Cages</option>
             <option value="20">Fully recyclable K4 bins</option>
             <option value="30">Waste segregation Bins</option>
-            <option value="40">Shredding of confidential documents </option>
-            
+            <option value="40">Shredding of confidential documents </option>          
           </select>
+		  
+		  <label > Upload Image Of Waste:
+		    <input type="file" name="name" placeholder="Image Of Waste" >
+		  </label>
               <button  class="button">Submit</button>
-			  <input type="hidden" name="_subject" value="New submission! - Special service">
+			  <input type="hidden" name="_subject" value="New submission! - Genaral service">
 			  <input type="hidden" name="_next" value="thankyou.html">
         </div>
         
